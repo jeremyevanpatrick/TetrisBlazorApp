@@ -1,0 +1,36 @@
+# Build Folders
+bin/
+obj/
+build/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+.vs/
+.vscode/
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Rider IDE files
+.idea/
+
+# Resharper files
+_ReSharper*/
+
+# Dotnet publish output
+publish/
+
+# Logs
+*.log
+
+# Blazor specific
+wwwroot/_framework/
+
+# Others
+*.DS_Store

@@ -1,0 +1,23 @@
+﻿@inherits LayoutComponentBase
+
+<style>
+    .top-row {
+        padding: 0px;
+        height: 3.5rem;
+        background-color: rgba(0,0,0,0.4) !important;
+        z-index: 900;
+        justify-content:normal!important;
+    }
+</style>
+
+<div class="page">
+    <div class="main">
+        <div class="top-row px-4 border-0">
+            <a class="navbar-brand text-white float-left" href="">TetrisApp</a>
+        </div>
+
+        <div class="content px-4">
+            @Body
+        </div>
+    </div>
+</div>

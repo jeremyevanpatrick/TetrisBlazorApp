@@ -1,0 +1,27 @@
+﻿
+<div class="position-relative next-piece @Value.Type.ToString()-next-piece">
+@{
+    for (var y = 0; y < Value.Matrix.Length; y++)
+    {
+        if (Value.Matrix[y].ToList().Where(x=>x == 1).Any())
+        {
+            for (var x = 0; x < Value.Matrix[y].Length; x++)
+            {
+                if (Value.Matrix[y][x] == 1)
+                {
+                    <div class="@Value.Type.ToString()-solid"></div>
+                }
+                else
+                {
+                    <div class="space"></div>
+                }
+            }
+        }
+    }
+}
+</div>
+
+@code {
+    [Parameter]
+    public TetrisApp.Models.Piece Value { get; set; }
+}

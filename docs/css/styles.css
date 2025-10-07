@@ -1,0 +1,256 @@
+﻿
+.mainContainer {
+    display: block;
+    margin: 0 auto;
+    width: 840px;
+}
+
+.mainArea,
+.mainArea:focus,
+.mainArea:focus-visible,
+.mainArea:focus-within{
+    display: inline-block;
+    width: 100%;
+    outline:none;
+}
+
+.sidePanel {
+    width: 280px;
+    height: 560px;
+    display: inline-block;
+    float: left;
+}
+
+.mainPanel {
+    width: 280px;
+    height: 560px;
+    display: inline-block;
+    float: left;
+    background-repeat: repeat;
+    overflow: hidden;
+}
+
+.space {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    float: left;
+}
+
+.empty {
+    background-image: url('../images/bgtile.png');
+}
+
+#pause-menu {
+    background-color: #2b2b2b73;
+    z-index: 500;
+    bottom: 0px;
+}
+
+#static-bg {
+    height: calc(100% + (2 * 28px));
+    bottom: 0px;
+    z-index: 0;
+    background-image: url(../images/bgtile.png);
+    background-repeat: repeat;
+}
+
+#moving-parts {
+    height: calc(100% + (2 * 28px));
+    bottom: 0px;
+    z-index: 100;
+}
+
+[class*="-solid"] {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    float: left;
+    /*border: 2px inset #000000;*/
+    border-radius: 2px;
+}
+.turquoise-solid {
+    background-color: #40e0d0;
+    background-image: url('../images/turquoise.png');
+}
+
+.blue-solid {
+    background-color: #0000ff;
+    background-image: url('../images/blue.png');
+}
+
+.orange-solid {
+    background-color: #ffa500;
+    background-image: url('../images/orange.png');
+}
+
+.yellow-solid {
+    background-color: #ffff00;
+    background-image: url('../images/yellow.png');
+}
+
+.green-solid {
+    background-color: #008000;
+    background-image: url('../images/green.png');
+}
+
+.purple-solid {
+    background-color: #800080;
+    background-image: url('../images/purple.png');
+}
+
+.red-solid {
+    background-color: #ff0000;
+    background-image: url('../images/red.png');
+}
+
+/*    
+.turquoise-solid {
+    background-color: #3b3c68;
+}
+
+.blue-solid {
+    background-color: #2b0574;
+}
+
+.orange-solid {
+    background-color: #6a2e35;
+}
+
+.yellow-solid {
+    background-color: #6a4435;
+}
+
+.green-solid {
+    background-color: #2b2535;
+}
+
+.purple-solid {
+    background-color: #4b0555;
+}
+
+.red-solid {
+    background-color: #6a0535;
+}
+*/
+
+.mainPanel .piece {
+    display: inline-block;
+    float: left;
+}
+
+.mainPanel .piece > div {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    float: left;
+}
+
+.mainPanel [class*="-piece"] {
+    width: 84px;
+    height: 84px;
+}
+
+.mainPanel .yellow-piece {
+    width: 56px;
+    height: 56px;
+}
+
+.mainPanel .turquoise-piece {
+    width: 112px;
+    height: 112px;
+}
+.mainPanel .active-piece{
+    z-index:10;
+}
+.mainPanel .shadow-piece {
+    opacity: 0.375;
+    z-index: 9;
+}
+
+.btn-light {
+    cursor: pointer;
+    position: relative;
+}
+
+.btn-light > div {
+    display: inline-block;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    font-size: 8px;
+}
+
+.sideSection {
+    background-color: #d6d6d6;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-weight: bold;
+    position:relative;
+}
+
+.sideSection h2 {
+    font-weight: bold;
+}
+
+.sideSection > div {
+    background-color: #2b2b2b;
+    color: #FFF;
+    margin: 0.25rem 0px;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    width: 100%;
+}
+
+#nextPieces {
+    display: inline-block;
+}
+
+#nextPieces .next-piece {
+    display: block;
+    float: none;
+    height: 56px;
+    margin: 1rem auto;
+}
+
+#nextPieces .next-piece > div {
+    height: 28px;
+    width: 28px;
+    display: inline-block;
+    float: left;
+}
+
+#nextPieces [class*="-next-piece"] {
+    width: 84px;
+}
+
+#nextPieces .yellow-next-piece {
+    width: 56px;
+}
+
+#nextPieces .turquoise-next-piece {
+    width: 112px;
+    padding-top: 14px;
+}
+
+.section-highlight{
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    border-radius: 4px;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    line-height: 3rem;
+}
+
+#runAI {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    display: inline-block;
+    width: auto;
+    font-size: 0.5rem;
+    cursor: pointer;
+}

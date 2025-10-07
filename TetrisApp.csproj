@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	<StaticWebAssetBasePath Condition="'$(Configuration)' == 'mrjepatrick.com AWS'">/portfolio/dotnet/TetrisApp/</StaticWebAssetBasePath>
+	<StaticWebAssetBasePath Condition="'$(Configuration)' == 'Release'">/TetrisApp/</StaticWebAssetBasePath>
+    <Configurations>Debug;Release;mrjepatrick.com AWS</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\bgtile.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="5.0.9" PrivateAssets="all" Condition="'$(Configuration)' == 'Debug'" />
+    <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

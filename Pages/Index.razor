@@ -1,0 +1,128 @@
+﻿@page "/"
+@inherits IndexBase
+
+<link href="css/styles.css" rel="stylesheet" />
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <div class="mainContainer py-2">
+                <div class="mainArea" @ref="keyboardRef" tabindex="0" @onkeydown="HandleKeyDown" @onkeyup="HandleKeyUp" @onblur="HandleBlur">
+                    <div class="sidePanel">
+                        <div class="topLeft d-inline-block w-100">
+                            <div class="sideSection">
+                                Score
+                                <div id="score">@Board.Score</div>
+                                Level
+                                <div id="level">@Board.Level</div>
+                                Lines
+                                <div id="lines">@Board.Lines</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainPanel position-relative">
+                        @if (Paused)
+                        {
+                            <div id="pause-menu" class="position-absolute w-100 h-100">
+                                <div class="sideSection">
+                                    @if (Board.StartMessage == "Start Game")
+                                    {
+                                        <h2>Tetris</h2>
+                                    }
+                                    else if (Board.StartMessage == "Restart Game")
+                                    {
+                                        <h2>Game Over</h2>
+                                    }
+                                    else
+                                    {
+                                        <h2>Paused</h2>
+                                    }
+                                    <div id="runAI" class="btn btn-dark text-light" @onclick="HandleAIClick">Run AI</div>
+                                    <div class="d-block my-0 mx-auto py-4">
+                                        <div class="btn btn-light text-dark" @onclick="HandleStartClick">
+                                            @Board.StartMessage
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <div id="static-bg" class="position-absolute w-100">
+                            @foreach (TetrisApp.Models.Position[] positions in Board.BoardPositions.Positions)
+                            {
+                                <div class="space-row">
+                                    @foreach (TetrisApp.Models.Position pos in positions)
+                                    {
+                                        @if (TetrisApp.Models.Color.empty.Equals(pos.Type))
+                                        {
+                                            <div class="space empty"></div>
+                                        }
+                                        else
+                                        {
+                                            <div class="space @pos.Type.ToString()-solid"></div>
+                                        }
+                                    }
+                                </div>
+                            }
+                        </div>
+                        <div id="moving-parts" class="position-absolute w-100">
+                            <PieceComponent Value="@Board.ActivePiece"></PieceComponent>
+                            @if (!Paused)
+                            {
+                                <PieceComponent Value="@Board.ActiveShadow"></PieceComponent>
+                            }
+                        </div>
+                    </div>
+                    <div class="sidePanel">
+                        <div class="topRight d-inline-block w-100">
+                            <div class="sideSection" style="margin-bottom: 15px;">
+                                Next
+                                <div id="nextPieces" class="text-center">
+                                    @foreach (Models.Piece nextPiece in Board.NextPieces)
+                                    {
+                                        <NextPieceComponent Value="@nextPiece"></NextPieceComponent>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottomRight d-inline-block w-100">
+                            <div class="sideSection my-0">
+                                Controls
+                                <div class="controlsArea d-inline-block w-100">
+                                    <div class="btn btn-light text-center float-right" @onclick="HandleEnterClick">
+                                        <span class="oi oi oi-arrow-circle-left"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <div>Enter</div>
+                                    </div>
+
+                                    <div class="float-left text-center">
+                                        <div class="d-block py-1">
+                                            <div class="btn btn-light text-center" @onclick="HandleUpClick">
+                                                <span class="oi oi-arrow-top"></span>
+                                                <div>W</div>
+                                            </div>
+                                        </div>
+                                        <div class="d-block">
+                                            <div class="btn btn-light text-center" @onclick="HandleLeftClick">
+                                                <span class="oi oi-arrow-left"></span>
+                                                <div>A</div>
+                                            </div>
+                                            <div class="btn btn-light text-center" @onclick="HandleDownClick">
+                                                <span class="oi oi-arrow-bottom"></span>
+                                                <div>S</div>
+                                            </div>
+                                            <div class="btn btn-light text-center" @onclick="HandleRightClick">
+                                                <span class="oi oi-arrow-right"></span>
+                                                <div>D</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

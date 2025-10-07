@@ -1,0 +1,24 @@
+﻿
+<div class="position-absolute piece @Value.Type.ToString()-piece @(Value.IsActive ? "active-piece" : "shadow-piece")" style="left:@(Value.BoardPosition.XPos * 28)px;top:@(Value.BoardPosition.YPos * 28)px;">
+    @{
+        for (var y = 0; y < Value.Matrix.Length; y++)
+        {
+            for (var x = 0; x < Value.Matrix[y].Length; x++)
+            {
+                if (Value.Matrix[y][x] == 1)
+                {
+                    <div class="@Value.Type.ToString()-solid"></div>
+                }
+                else
+                {
+                    <div class="space"></div>
+                }
+            }
+        }
+    }
+</div>
+
+@code {
+    [Parameter]
+    public TetrisApp.Models.Piece Value { get; set; }
+}

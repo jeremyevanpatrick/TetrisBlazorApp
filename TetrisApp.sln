@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TetrisApp", "TetrisApp.csproj", "{823889B3-CA7F-4454-830C-BDDFAE59953B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		mrjepatrick.com AWS|Any CPU = mrjepatrick.com AWS|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823889B3-CA7F-4454-830C-BDDFAE59953B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823889B3-CA7F-4454-830C-BDDFAE59953B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823889B3-CA7F-4454-830C-BDDFAE59953B}.mrjepatrick.com AWS|Any CPU.ActiveCfg = mrjepatrick.com AWS|Any CPU
+		{823889B3-CA7F-4454-830C-BDDFAE59953B}.mrjepatrick.com AWS|Any CPU.Build.0 = mrjepatrick.com AWS|Any CPU
+		{823889B3-CA7F-4454-830C-BDDFAE59953B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823889B3-CA7F-4454-830C-BDDFAE59953B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1248D95-3EFF-4285-8569-32A6E417DF23}
+	EndGlobalSection
+EndGlobal
