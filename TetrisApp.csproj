@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\.nojekyll" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="wwwroot\images\bgtile.png" />
   </ItemGroup>
 
