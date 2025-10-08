@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -6,10 +6,6 @@
 	<StaticWebAssetBasePath Condition="'$(Configuration)' == 'Release'">/</StaticWebAssetBasePath>
     <Configurations>Debug;Release;mrjepatrick.com AWS</Configurations>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\.nojekyll" />
-  </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\images\bgtile.png" />

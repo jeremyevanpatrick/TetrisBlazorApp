@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+# Treat published static files as binary (don't touch line endings)
+docs/** binary
